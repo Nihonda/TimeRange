@@ -7,6 +7,12 @@
 
 import UIKit
 
+struct TimeViewLayout {
+    static let LABEL_WIDTH: CGFloat         = 100
+    static let LABEL_HEIGHT: CGFloat        = 25
+    static let TEXTFIELD_HEIGHT: CGFloat    = 40
+}
+
 class TimeView: UIView {
     lazy var captionLabel: UILabel = {
         let label = UILabel()
@@ -39,5 +45,32 @@ class TimeView: UIView {
     private func setupView() {
         addSubview(captionLabel)
         addSubview(timeTextField)
+        setupLayout()
+    }
+    
+    // MARK: - Add constraints
+    private func setupLayout() {
+        // Set Caption constraints
+        NSLayoutConstraint.activate([
+            // pin caption to top, left and right
+            captionLabel.topAnchor.constraint(equalTo: topAnchor),
+            captionLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            captionLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+            
+            captionLabel.widthAnchor.constraint(equalToConstant: TimeViewLayout.LABEL_WIDTH),
+            captionLabel.heightAnchor.constraint(equalToConstant: TimeViewLayout.LABEL_HEIGHT)
+        ])
+        
+        // Set TextField constraints
+        NSLayoutConstraint.activate([
+            // pin top to Caption label bottom
+            timeTextField.topAnchor.constraint(equalTo: captionLabel.bottomAnchor),
+            timeTextField.leadingAnchor.constraint(equalTo: leadingAnchor),
+            timeTextField.trailingAnchor.constraint(equalTo: trailingAnchor),
+            timeTextField.heightAnchor.constraint(equalToConstant: TimeViewLayout.TEXTFIELD_HEIGHT),
+            
+            // pin text field to bottom
+            timeTextField.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
     }
 }
