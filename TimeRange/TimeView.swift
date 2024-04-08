@@ -87,4 +87,9 @@ class TimeView: UIView {
             timeTextField.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
+    
+    // MARK: - Public functions
+    func setCaption(with text: String) {
+        captionLabel.text = text
+    }
 }
