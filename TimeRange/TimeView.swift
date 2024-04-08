@@ -36,6 +36,7 @@ class TimeView: UIView {
         textField.inputView = timePicker
         
         textField.textAlignment = .center
+        textField.text = "00:00"
         
         // borders
         textField.layer.borderWidth = 1
