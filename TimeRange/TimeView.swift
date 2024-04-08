@@ -24,6 +24,7 @@ class TimeView: UIView {
     lazy var timePicker: UIDatePicker = {
         let picker = UIDatePicker()
         picker.datePickerMode = .time
+        picker.locale = Locale(identifier: "ja_JP")
         if #available(iOS 13.4, *) {
             picker.preferredDatePickerStyle = .wheels
         }
