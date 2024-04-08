@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TimeRangeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
