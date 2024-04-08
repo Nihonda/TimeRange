@@ -70,9 +70,17 @@
 		C11CF2912BC4207B00F8FA9A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C11CF2922BC4216500F8FA9A /* TimeView.swift */,
+				C11CF2942BC43C1500F8FA9A /* TimeView */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		C11CF2942BC43C1500F8FA9A /* TimeView */ = {
+			isa = PBXGroup;
+			children = (
+				C11CF2922BC4216500F8FA9A /* TimeView.swift */,
+			);
+			path = TimeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
