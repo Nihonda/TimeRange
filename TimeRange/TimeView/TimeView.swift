@@ -60,6 +60,10 @@ class TimeView: UIView {
         return textField
     }()
     
+    
+    // Delegates
+    weak var delegate: TimeViewDelegate?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -114,5 +118,8 @@ extension TimeView {
         dateFormatter.timeStyle = .short
         let dateString = dateFormatter.string(from: timePicker.date)
         timeTextField.text = "\(dateString)"
+        
+        // send time to controller
+        delegate?.onTextChanged(dateString)
     }
 }
