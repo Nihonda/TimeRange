@@ -17,6 +17,7 @@ class TimeView: UIView {
     lazy var captionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
         return label
     }()
     
