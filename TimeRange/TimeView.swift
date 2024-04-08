@@ -36,6 +36,9 @@ class TimeView: UIView {
             picker.date = date
         }
 
+        // Change event
+        picker.addTarget(self, action: #selector(timeChanged), for: .valueChanged)
+        
         return picker
     }()
     
@@ -101,5 +104,15 @@ class TimeView: UIView {
     // MARK: - Public functions
     func setCaption(with text: String) {
         captionLabel.text = text
+    }
+}
+
+// MARK: - Events
+extension TimeView {
+    @objc private func timeChanged() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .short
+        let dateString = dateFormatter.string(from: timePicker.date)
+        timeTextField.text = "\(dateString)"
     }
 }
