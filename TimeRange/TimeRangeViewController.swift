@@ -54,10 +54,16 @@ class TimeRangeViewController: UIViewController {
         return button
     }()
     
+    // Properties
+    private var startTime = ""
+    private var endTime = ""
+    private var checkTime = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
+        setDelegates()
     }
 
     private func setupView() {
@@ -89,5 +95,25 @@ class TimeRangeViewController: UIViewController {
             runButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
+    
+    private func setDelegates() {
+        startTimeView.delegate = self
+        endTimeView.delegate = self
+        checkTimeView.delegate = self
+    }
 }
 
+// MARK: - TimeViewDelegate
+extension TimeRangeViewController: TimeViewDelegate {
+    func onTextChanged(_ text: String, sender: TimeView) {
+        if sender == startTimeView {
+            startTime = text
+        }
+        if sender == endTimeView {
+            endTime = text
+        }
+        if sender == checkTimeView {
+            checkTime = text
+        }
+    }
+}
