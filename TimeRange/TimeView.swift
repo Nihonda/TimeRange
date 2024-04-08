@@ -33,6 +33,16 @@ class TimeView: UIView {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.inputView = timePicker
+        
+        textField.textAlignment = .center
+        
+        // borders
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.darkGray.cgColor
+        textField.layer.cornerRadius = 5
+        
+        // example
+//        textField.text = "22:50"
         return textField
     }()
     
