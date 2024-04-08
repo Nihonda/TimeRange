@@ -8,7 +8,7 @@
 import UIKit
 
 struct TimeViewLayout {
-    static let LABEL_WIDTH: CGFloat         = 100
+    static let LABEL_WIDTH: CGFloat         = 120
     static let LABEL_HEIGHT: CGFloat        = 25
     static let TEXTFIELD_HEIGHT: CGFloat    = 40
 }
