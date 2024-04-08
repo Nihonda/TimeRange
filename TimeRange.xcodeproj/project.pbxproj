@@ -13,6 +13,7 @@
 		C11323E12BC4100200B8BBF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C11323E02BC4100200B8BBF7 /* Assets.xcassets */; };
 		C11323E42BC4100200B8BBF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C11323E22BC4100200B8BBF7 /* LaunchScreen.storyboard */; };
 		C11CF2932BC4216500F8FA9A /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11CF2922BC4216500F8FA9A /* TimeView.swift */; };
+		C11CF2962BC43C5F00F8FA9A /* TimeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11CF2952BC43C5F00F8FA9A /* TimeViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C11323E32BC4100200B8BBF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C11323E52BC4100200B8BBF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C11CF2922BC4216500F8FA9A /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
+		C11CF2952BC43C5F00F8FA9A /* TimeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				C11CF2922BC4216500F8FA9A /* TimeView.swift */,
+				C11CF2952BC43C5F00F8FA9A /* TimeViewDelegate.swift */,
 			);
 			path = TimeView;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			files = (
 				C11323DC2BC4100000B8BBF7 /* TimeRangeViewController.swift in Sources */,
 				C11323D82BC4100000B8BBF7 /* AppDelegate.swift in Sources */,
+				C11CF2962BC43C5F00F8FA9A /* TimeViewDelegate.swift in Sources */,
 				C11323DA2BC4100000B8BBF7 /* SceneDelegate.swift in Sources */,
 				C11CF2932BC4216500F8FA9A /* TimeView.swift in Sources */,
 			);
