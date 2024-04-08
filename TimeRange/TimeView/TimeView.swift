@@ -120,6 +120,6 @@ extension TimeView {
         timeTextField.text = "\(dateString)"
         
         // send time to controller
-        delegate?.onTextChanged(dateString)
+        delegate?.onTextChanged(dateString, sender: self)
     }
 }
