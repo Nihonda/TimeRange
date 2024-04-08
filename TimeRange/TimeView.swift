@@ -28,6 +28,14 @@ class TimeView: UIView {
         if #available(iOS 13.4, *) {
             picker.preferredDatePickerStyle = .wheels
         }
+        
+        // Default time 00:00
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        if let date = dateFormatter.date(from: "00:00") {
+            picker.date = date
+        }
+
         return picker
     }()
     
