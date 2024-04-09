@@ -46,6 +46,9 @@ class TimeRangeViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Run", for: .normal)
         
+        // Event
+        button.addTarget(self, action: #selector(onClickRun), for: .touchUpInside)
+        
         // layer
         button.backgroundColor = .systemBlue
         button.layer.cornerRadius = 5
@@ -100,6 +103,31 @@ class TimeRangeViewController: UIViewController {
         startTimeView.delegate = self
         endTimeView.delegate = self
         checkTimeView.delegate = self
+    }
+}
+
+// MARK: - Events
+extension TimeRangeViewController {
+    @objc private func onClickRun() {
+        var isIncluded = false
+        
+        // Case 1: Start > End
+        if startTime > endTime {
+            // 14:00 - 12:00
+            isIncluded = checkTime >= startTime && checkTime < "24:00" || checkTime < endTime
+        }
+        // Case 2: Start < End
+        // 12:00 - 14:00
+        if startTime < endTime {
+            isIncluded = checkTime >= startTime && checkTime < endTime
+        }
+        
+        // Case 3: Start = End
+        if startTime == endTime {
+            isIncluded = true
+        }
+        
+//        print(isIncluded)
     }
 }
 
