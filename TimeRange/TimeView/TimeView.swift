@@ -116,6 +116,7 @@ extension TimeView {
     @objc private func timeChanged() {
         let dateFormatter = DateFormatter()
         dateFormatter.timeStyle = .short
+        dateFormatter.dateFormat = "HH:mm"
         let dateString = dateFormatter.string(from: timePicker.date)
         timeTextField.text = "\(dateString)"
         
