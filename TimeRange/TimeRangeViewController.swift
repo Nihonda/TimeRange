@@ -58,9 +58,12 @@ class TimeRangeViewController: UIViewController {
     }()
     
     // Properties
-    private var startTime = ""
-    private var endTime = ""
-    private var checkTime = ""
+    private var startTime = "00:00"
+    private var endTime = "00:00"
+    private var checkTime = "00:00"
+    
+    // Singlton instance of file manager
+    private let fileManager = File.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,6 +111,19 @@ class TimeRangeViewController: UIViewController {
 
 // MARK: - Events
 extension TimeRangeViewController {
+    private func saveDataToFile(with str: String) {
+        let fileName = "output.txt"
+        
+        // Step 1: read previous content
+        let previousContent = fileManager.read(fileName) ?? ""
+        let newContent = previousContent + str
+        
+        // Step 2: save new content
+        _ = fileManager.write(fileName, content: newContent)
+
+//        print(newContent)
+    }
+    
     @objc private func onClickRun() {
         var isIncluded = false
         
@@ -128,6 +144,11 @@ extension TimeRangeViewController {
         }
         
 //        print(isIncluded)
+        
+        var sentence = "Start at: \(startTime)\t End at: \(endTime) "
+        sentence += isIncluded ? "includes " : "does not include "
+        sentence += "\(checkTime)\n"
+        saveDataToFile(with: sentence)
     }
 }
 
