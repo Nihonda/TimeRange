@@ -12,6 +12,10 @@
 		C11323DC2BC4100000B8BBF7 /* TimeRangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11323DB2BC4100000B8BBF7 /* TimeRangeViewController.swift */; };
 		C11323E12BC4100200B8BBF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C11323E02BC4100200B8BBF7 /* Assets.xcassets */; };
 		C11323E42BC4100200B8BBF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C11323E22BC4100200B8BBF7 /* LaunchScreen.storyboard */; };
+		C11CF2932BC4216500F8FA9A /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11CF2922BC4216500F8FA9A /* TimeView.swift */; };
+		C11CF2962BC43C5F00F8FA9A /* TimeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11CF2952BC43C5F00F8FA9A /* TimeViewDelegate.swift */; };
+		C11CF2992BC57AAF00F8FA9A /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11CF2982BC57AAF00F8FA9A /* File.swift */; };
+		C11CF29B2BC57B1600F8FA9A /* IO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11CF29A2BC57B1600F8FA9A /* IO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		C11323E02BC4100200B8BBF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C11323E32BC4100200B8BBF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C11323E52BC4100200B8BBF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C11CF2922BC4216500F8FA9A /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
+		C11CF2952BC43C5F00F8FA9A /* TimeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewDelegate.swift; sourceTree = "<group>"; };
+		C11CF2982BC57AAF00F8FA9A /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		C11CF29A2BC57B1600F8FA9A /* IO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +65,39 @@
 				C11323D72BC4100000B8BBF7 /* AppDelegate.swift */,
 				C11323D92BC4100000B8BBF7 /* SceneDelegate.swift */,
 				C11323DB2BC4100000B8BBF7 /* TimeRangeViewController.swift */,
+				C11CF2912BC4207B00F8FA9A /* Views */,
+				C11CF2972BC57A9500F8FA9A /* Widgets */,
 				C11323E02BC4100200B8BBF7 /* Assets.xcassets */,
 				C11323E22BC4100200B8BBF7 /* LaunchScreen.storyboard */,
 				C11323E52BC4100200B8BBF7 /* Info.plist */,
 			);
 			path = TimeRange;
+			sourceTree = "<group>";
+		};
+		C11CF2912BC4207B00F8FA9A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C11CF2942BC43C1500F8FA9A /* TimeView */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C11CF2942BC43C1500F8FA9A /* TimeView */ = {
+			isa = PBXGroup;
+			children = (
+				C11CF2922BC4216500F8FA9A /* TimeView.swift */,
+				C11CF2952BC43C5F00F8FA9A /* TimeViewDelegate.swift */,
+			);
+			path = TimeView;
+			sourceTree = "<group>";
+		};
+		C11CF2972BC57A9500F8FA9A /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				C11CF2982BC57AAF00F8FA9A /* File.swift */,
+				C11CF29A2BC57B1600F8FA9A /* IO.swift */,
+			);
+			path = Widgets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +172,11 @@
 			files = (
 				C11323DC2BC4100000B8BBF7 /* TimeRangeViewController.swift in Sources */,
 				C11323D82BC4100000B8BBF7 /* AppDelegate.swift in Sources */,
+				C11CF2962BC43C5F00F8FA9A /* TimeViewDelegate.swift in Sources */,
+				C11CF2992BC57AAF00F8FA9A /* File.swift in Sources */,
 				C11323DA2BC4100000B8BBF7 /* SceneDelegate.swift in Sources */,
+				C11CF29B2BC57B1600F8FA9A /* IO.swift in Sources */,
+				C11CF2932BC4216500F8FA9A /* TimeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
